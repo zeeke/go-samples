@@ -1,0 +1,21 @@
+name: Go
+
+on: [push, pull_request]
+
+jobs:
+
+  run:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.19
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.19.x
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
+
+    - name: run
+      run: ./run.sh
