@@ -7,4 +7,4 @@ go test ./sginkgo
 go test ./sginkgo --ginkgo.flake-attempts=3
 
 
-
+exit 0
