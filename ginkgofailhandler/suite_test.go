@@ -1,6 +1,7 @@
 package ginkgofailhandler
 
 import (
+	"fmt"
 	"testing"
 
 	. "github.com/onsi/ginkgo/v2"
@@ -12,6 +13,7 @@ func TestCart(t *testing.T) {
 		By("Fail Handler")
 
 		By("CurrentSpecReport().LeafNodeText: " + CurrentSpecReport().LeafNodeText)
+		By("CurrentSpecReport().Failed(): " + fmt.Sprintf("%t", CurrentSpecReport().Failed()))
 
 		Fail(message, callerSkip...)
 	})
