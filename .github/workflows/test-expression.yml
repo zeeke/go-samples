@@ -1,0 +1,17 @@
+name: Conditional Actions
+
+on: [push, pull_request]
+
+env:
+  image-push-owner: 'zeeke'
+
+jobs:
+
+  conditional-job:
+    
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: run
+      if: ${{ github.repository_owner == env.image-push-owner }}
+      run: echo "Hello World!"
