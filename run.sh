@@ -22,5 +22,6 @@ go test -v ./ginkgofailhandler -ginkgo.v
 
 go test -v ./multipleskips --ginkgo.skip "D1 A" --ginkgo.skip "D1 B"
 
+go test ./gomegaformat
 
 exit 0
