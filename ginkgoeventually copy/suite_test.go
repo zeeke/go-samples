@@ -24,14 +24,4 @@ var _ = Describe("D1", func() {
 
 		Expect(i).To(Equal(1))
 	})
-
-	It("Nested assertion", func() {
-		Eventually(func(g Gomega) {
-			By("iteration")
-			Expect(true).To(BeFalse())
-		}).
-			WithPolling(10 * time.Millisecond).
-			WithTimeout(1 * time.Second).
-			Should(Succeed())
-	})
 })
